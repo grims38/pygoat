@@ -61,9 +61,9 @@ jobs:
 
     steps:
     - name: Set up Docker
-      uses: docker-practice/actions-setup-docker@v1
+      uses: docker-practice/actions-setup-docker@master
       with:
-         docker_version: 23.0.3
+         docker_version: 27.5.1
     - name: Build Docker Image
       run: docker build -t myapp:latest .
     - name: Docker Scout Scan
