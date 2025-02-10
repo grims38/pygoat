@@ -62,12 +62,9 @@ jobs:
     steps:
     - name: Set up Docker
       uses: docker/setup-docker-action@v4
-    - name: Check place
-      run: pwd
-    
-    - name: check folder
-      run: ls -la
-
+ 
+    - name: Build Docker Image
+      run: docker build . -t myapp
 
     - name: Build Docker Image
       run: docker build . -f Dockerfile -t myapp:latest
