@@ -63,8 +63,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Docker
-        uses: docker/setup-docker-action@v4
-        
+        uses: docker-practice/actions-setup-docker@v1    
       - name: Build Docker Image
         run: docker build . -t myapp:latest
 
