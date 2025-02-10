@@ -23,7 +23,7 @@ jobs:
       run: bandit -ll -ii -r . -f json -o sast-report.json
     
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()  
       with:
          name: sast-findings
